@@ -1043,14 +1043,18 @@ a:active {
   color: #FFFFFF;
   font-size: 24px;
 }
+/* line 187, assets/_header.scss */
+.main-header .social-media-links {
+  display: none;
+}
 
-/* line 188, assets/_header.scss */
+/* line 192, assets/_header.scss */
 .main-navigation,
 .mobile-nav {
   font-weight: 300;
   text-transform: uppercase;
 }
-/* line 193, assets/_header.scss */
+/* line 197, assets/_header.scss */
 .main-navigation a,
 .mobile-nav a {
   color: #FFFFFF;
@@ -1344,26 +1348,32 @@ object {
   .main-header a {
     color: #FFFFFF;
   }
+  /* line 89, assets/_media-queries.scss */
+  .main-header .social-media-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 
-  /* line 90, assets/_media-queries.scss */
+  /* line 96, assets/_media-queries.scss */
   .site-branding {
     -ms-flex-preferred-size: 20%;
     flex-basis: 20%;
   }
 
-  /* line 95, assets/_media-queries.scss */
+  /* line 101, assets/_media-queries.scss */
   .main-navigation {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
   }
 
-  /* line 100, assets/_media-queries.scss */
+  /* line 106, assets/_media-queries.scss */
   .social-media-links {
     -ms-flex-preferred-size: 11%;
     flex-basis: 11%;
   }
 
-  /* line 105, assets/_media-queries.scss */
+  /* line 111, assets/_media-queries.scss */
   .main-navigation .menu-main-menu-container ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1377,14 +1387,14 @@ object {
     font-size: 14px;
   }
 
-  /* line 119, assets/_media-queries.scss */
+  /* line 125, assets/_media-queries.scss */
   .page-template-homepage .main-header {
     position: absolute;
     bottom: 0;
     left: 0;
     top: auto;
   }
-  /* line 125, assets/_media-queries.scss */
+  /* line 131, assets/_media-queries.scss */
   .page-template-homepage .main-header.locked {
     position: fixed;
     bottom: auto;

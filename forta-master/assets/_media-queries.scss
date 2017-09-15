@@ -85,6 +85,12 @@
 		a {
 			color: $white-color;
 		}
+
+		.social-media-links {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+		}
 	}
 
 	.site-branding {
