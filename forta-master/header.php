@@ -23,7 +23,7 @@ $socialArray = array(
 );
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html id="top" <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,6 +39,7 @@ $socialArray = array(
 	<?php if ( get_theme_mod( 'forta_master_accent_color' ) ) : ?>
 	<style>
 		.site-accent { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.site-font-accent { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 	</style>
 	<?php endif; ?>
 </head>
@@ -131,6 +132,10 @@ $socialArray = array(
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
+				<div class="site-motto site-font-accent">
+					<?php printf( get_bloginfo ( 'description' ) ); ?>
+				</div>
+				
 				<?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-1',

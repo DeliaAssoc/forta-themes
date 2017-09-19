@@ -28,3 +28,8 @@
 	display: block;
 	width: 100%;
 }
+
+.animated {
+    -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+    animation-delay: 2s;
+}

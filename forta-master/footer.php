@@ -22,7 +22,7 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<a id="btt-button" class="back-to-top site-accent" href="#" >Top</a>
+<a id="btt-button" class="back-to-top site-accent" href="#top" ></a>
 
 <?php wp_footer(); ?>
 
