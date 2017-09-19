@@ -103,7 +103,9 @@ jQuery(document).ready(function($) {
 		autoplay: true,
 		autoplaySpeed: 5000,
 		fade: true,
-		cssEase: 'linear'
+		cssEase: 'linear',
+		prevArrow: '<i class="fa fa-caret-left site-accent-border"></i>',
+		nextArrow: '<i class="fa fa-caret-right site-accent-border"></i>'
 	});
 
 	// Turn animation on or off depending on current slide

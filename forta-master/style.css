@@ -1375,12 +1375,48 @@ object {
     display: none;
   }
 
-  /* line 68, assets/_media-queries.scss */
+  /* line 70, assets/_media-queries.scss */
+  .home-slider .slick-arrow {
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
+    color: #FFFFFF;
+    height: 40px;
+    position: absolute;
+    top: 47%;
+    width: 40px;
+    z-index: 9999;
+  }
+  /* line 80, assets/_media-queries.scss */
+  .home-slider .slick-arrow:before {
+    font-size: 24px;
+  }
+  /* line 85, assets/_media-queries.scss */
+  .home-slider .fa-caret-left {
+    left: 2.5%;
+  }
+  /* line 88, assets/_media-queries.scss */
+  .home-slider .fa-caret-left:before {
+    left: 12px;
+    position: absolute;
+    top: 6px;
+  }
+  /* line 95, assets/_media-queries.scss */
+  .home-slider .fa-caret-right {
+    right: 2.5%;
+  }
+  /* line 98, assets/_media-queries.scss */
+  .home-slider .fa-caret-right:before {
+    left: 15px;
+    position: absolute;
+    top: 5px;
+  }
+
+  /* line 106, assets/_media-queries.scss */
   .main-header {
     position: fixed;
     top: 64px;
   }
-  /* line 72, assets/_media-queries.scss */
+  /* line 110, assets/_media-queries.scss */
   .main-header .flexxed {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1389,7 +1425,7 @@ object {
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
-  /* line 81, assets/_media-queries.scss */
+  /* line 119, assets/_media-queries.scss */
   .main-header .site-motto {
     text-align: center;
     font-weight: 500;
@@ -1397,40 +1433,40 @@ object {
     letter-spacing: 4.5px;
     margin-bottom: 20px;
   }
-  /* line 89, assets/_media-queries.scss */
+  /* line 127, assets/_media-queries.scss */
   .main-header .main-navigation {
     display: block;
   }
-  /* line 93, assets/_media-queries.scss */
+  /* line 131, assets/_media-queries.scss */
   .main-header a {
     color: #FFFFFF;
   }
-  /* line 97, assets/_media-queries.scss */
+  /* line 135, assets/_media-queries.scss */
   .main-header .social-media-links {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 
-  /* line 104, assets/_media-queries.scss */
+  /* line 142, assets/_media-queries.scss */
   .site-branding {
     -ms-flex-preferred-size: 20%;
     flex-basis: 20%;
   }
 
-  /* line 109, assets/_media-queries.scss */
+  /* line 147, assets/_media-queries.scss */
   .main-navigation {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
   }
 
-  /* line 114, assets/_media-queries.scss */
+  /* line 152, assets/_media-queries.scss */
   .social-media-links {
     -ms-flex-preferred-size: 11%;
     flex-basis: 11%;
   }
 
-  /* line 119, assets/_media-queries.scss */
+  /* line 157, assets/_media-queries.scss */
   .main-navigation .menu-main-menu-container ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1444,14 +1480,14 @@ object {
     font-size: 14px;
   }
 
-  /* line 133, assets/_media-queries.scss */
+  /* line 171, assets/_media-queries.scss */
   .page-template-homepage .main-header {
     position: absolute;
     bottom: 0;
     left: 0;
     top: auto;
   }
-  /* line 139, assets/_media-queries.scss */
+  /* line 177, assets/_media-queries.scss */
   .page-template-homepage .main-header.locked {
     position: fixed;
     bottom: auto;
@@ -1461,5 +1497,11 @@ object {
     -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* line 7, assets/_ms.scss */
+  .home-slider .fa-caret-right:before {
+    top: 6px;
   }
 }

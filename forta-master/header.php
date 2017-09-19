@@ -40,6 +40,7 @@ $socialArray = array(
 	<style>
 		.site-accent { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.site-font-accent { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.site-accent-border { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important;  }
 	</style>
 	<?php endif; ?>
 </head>

@@ -65,6 +65,44 @@
 		display: none;
 	}
 
+	.home-slider {
+
+		.slick-arrow {
+			border: 2px solid $white-color;
+			border-radius: 20px;
+			color: $white-color;
+			height: 40px;
+			position: absolute;
+			top: 47%;
+			width: 40px;
+			z-index: 9999;
+
+			&:before {
+				font-size: 24px;
+			}
+		}
+
+		.fa-caret-left {
+			left: 2.5%;
+
+			&:before {
+				left: 12px;
+				position: absolute;
+				top: 6px;
+			}
+		}
+
+		.fa-caret-right {
+			right: 2.5%;
+
+			&:before {
+				left: 15px;
+				position: absolute;
+				top: 5px;
+			}
+		}
+	}
+
 	.main-header {
 		position: fixed;
 		top: 64px;
