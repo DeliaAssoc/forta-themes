@@ -118,8 +118,6 @@
 
 		.site-motto {
 			text-align: center;
-			font-weight: 500;
-			text-transform: uppercase;
 			letter-spacing: 4.5px;
 			margin-bottom: 20px;
 		}
@@ -175,15 +173,16 @@
 		top: auto;
 
 		&.locked {
-			position: fixed;
+			background-color: rgba( $darkest, 1);
 			bottom: auto;
+			position: fixed;
 			top: 64px;
 
-			-webkit-transition: all 0.5s ease-in-out;
-			-moz-transition: all 0.5s ease-in-out;
-			-ms-transition: all 0.5s ease-in-out;
-			-o-transition: all 0.5s ease-in-out;
-			transition: all 0.5s ease-in-out;
+			-webkit-transition: all 0.25s ease-in-out;
+			-moz-transition: all 0.25s ease-in-out;
+			-ms-transition: all 0.25s ease-in-out;
+			-o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
 		}
 	}
 }

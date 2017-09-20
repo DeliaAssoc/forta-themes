@@ -174,22 +174,50 @@ function top_widget_areas() {
 add_action( 'widgets_init', 'top_widget_areas' );
 
 /**
+ * Register Footer Menu Item Areas
+ */
+function footer_menu_area() {
+
+	$args = array(
+		'id'            => 'footer-column-one',
+		'class'         => 'footer-menu',
+		'name'          => __( 'Footer Column One Menu Area', 'text_domain' ),
+		'description'   => __( 'Area for custom footer menu links in first column', 'text_domain' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+	);
+	register_sidebar( $args );
+
+	$args = array(
+		'id'            => 'footer-column-two',
+		'class'         => 'footer-menu',
+		'name'          => __( 'Footer Column Two Menu Area', 'text_domain' ),
+		'description'   => __( 'Area for custom footer menu links in second column', 'text_domain' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+	);
+	register_sidebar( $args );
+
+}
+add_action( 'widgets_init', 'footer_menu_area' );
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function forta_master_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'forta-master' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'forta-master' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'forta_master_widgets_init' );
+// function forta_master_widgets_init() {
+// 	register_sidebar( array(
+// 		'name'          => esc_html__( 'Sidebar', 'forta-master' ),
+// 		'id'            => 'sidebar-1',
+// 		'description'   => esc_html__( 'Add widgets here.', 'forta-master' ),
+// 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+// 		'after_widget'  => '</section>',
+// 		'before_title'  => '<h2 class="widget-title">',
+// 		'after_title'   => '</h2>',
+// 	) );
+// }
+// add_action( 'widgets_init', 'forta_master_widgets_init' );
 
 /**
  * Implement the Custom Header feature.

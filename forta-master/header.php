@@ -41,6 +41,9 @@ $socialArray = array(
 		.site-accent { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.site-font-accent { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.site-accent-border { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important;  }
+		.main-navigation li a:hover { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.footer-menu li a:hover { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.footer-menu li a:before { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 	</style>
 	<?php endif; ?>
 </head>
@@ -133,7 +136,7 @@ $socialArray = array(
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
-				<div class="site-motto site-font-accent">
+				<div class="site-motto motto site-font-accent">
 					<?php printf( get_bloginfo ( 'description' ) ); ?>
 				</div>
 				
