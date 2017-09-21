@@ -40,6 +40,7 @@ jQuery(document).ready(function($) {
 			});
 		});
 
+		// Open mobile menu
 		$mobileBtn.on( 'click', function()
 		{
 			$mobileMenu.css( 'left', 0 );
@@ -79,22 +80,21 @@ jQuery(document).ready(function($) {
 	$( window ).on( 'scroll', function(){
 		var $winScroll = $( window ).scrollTop(),
 
-			$headerScroll = $mainHeaderHome.offset().top,
-			$contentScroll = $( '.homepage.content-area' ).offset().top,
-			$topOffset = $winScroll + $sitopLeftHeight;
-			$blockHeight = $sitopLeftHeight + $headerBlock;
+		$headerScroll = $mainHeaderHome.offset().top,
+		$contentScroll = $( '.homepage.content-area' ).offset().top,
+		$topOffset = $winScroll + $sitopLeftHeight;
+		$blockHeight = $sitopLeftHeight + $headerBlock;
 
 
-			if ( $headerScroll < $topOffset )
-			{
-				$mainHeader.addClass( 'locked' );
-			}
+		if ( $headerScroll < $topOffset )
+		{
+			$mainHeader.addClass( 'locked' );
+		}
 
-			if ( $contentScroll > $winScroll + $blockHeight )
-			{
-				$mainHeader.removeClass( 'locked' );
-			}
-
+		if ( $contentScroll > $winScroll + $blockHeight )
+		{
+			$mainHeader.removeClass( 'locked' );
+		}
 	});
 
 	// Initialize slick on homepage

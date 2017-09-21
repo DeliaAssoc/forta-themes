@@ -78,7 +78,12 @@
 }
 
 .legal {
+	color: $darkest;
 	padding: 20px 0;
+
+	a {
+		color: $darkest;
+	}
 
 	sup {
 		top: 0;
