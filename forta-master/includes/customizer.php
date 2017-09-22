@@ -8,24 +8,12 @@ function forta_master_customizer( $wp_customize ) {
 	    'priority'    => 10,
 	    'description' => 'Enter company information',
 	) );
-	// Tagline
-	// $wp_customize->add_section( 'forta_master_tagline_section' , array(
-	//     'title'       => __( 'Site Tagline', 'forta_master' ),
-	//     'priority'    => 30,
-	//     'description' => 'Enter the site tagline here',
-	// ) );
 	// Accent Color
 	$wp_customize->add_section( 'forta_master_color_section' , array(
 	    'title'       => __( 'Site Accent Color', 'forta_master' ),
 	    'priority'    => 30,
 	    'description' => 'Here you can adjust the site accent color',
 	) );
-	// Logo
-	// $wp_customize->add_section( 'forta_master_logo_section' , array(
-	//     'title'       => __( 'Logo', 'forta_master' ),
-	//     'priority'    => 30,
-	//     'description' => 'Upload a logo to replace the default site name and description in the header',
-	// ) );
 	// Social Media
 	$wp_customize->add_section( 'forta_master_social_section' , array(
 	    'title'       => __( 'Social Media', 'forta_master' ),
@@ -37,6 +25,12 @@ function forta_master_customizer( $wp_customize ) {
 	    'title'       => __( 'Privacy Policy', 'forta_master' ),
 	    'priority'    => 30,
 	    'description' => 'Add your Privacy Policy link here',
+	) );
+	// Product Pages
+	$wp_customize->add_section( 'forta_master_product_section' , array(
+	    'title'       => __( 'Product Pages', 'forta_master' ),
+	    'priority'    => 30,
+	    'description' => 'Product Page common elements',
 	) );
 
 	// Remove default sections
@@ -60,10 +54,6 @@ function forta_master_customizer( $wp_customize ) {
 	$wp_customize->add_setting( 'forta_master_company_fax', array( 'default' => __( '' ), 'forta_master' ) );
 	$wp_customize->add_setting( 'forta_master_company_email', array( 'default' => __( '' ), 'forta_master' ) );
 	$wp_customize->add_setting( 'forta_master_company_snippet', array( 'default' => __( '' ), 'forta_master' ) );
-	// Tagline
-	// $wp_customize->add_setting( 'forta_master_tagline', array( 'default' => __( '' ), 'forta_master' ) );
-	// Logo
-	// $wp_customize->add_setting( 'forta_master_logo' );
 	//  Accent Color
 	$wp_customize->add_setting( 'forta_master_accent_color', array( 'default' => '' ));
 	// Social Media
@@ -77,6 +67,15 @@ function forta_master_customizer( $wp_customize ) {
 	$wp_customize->add_setting( 'forta_master_social_pinterest_link', array( 'default' => __( '' ), 'forta_master' ) );
 	// Privacy Policy
 	$wp_customize->add_setting( 'forta_privacy_policy' );
+
+	// Product Pages
+	$wp_customize->add_setting( 'forta_master_products' );
+	$wp_customize->add_setting( 'forta_master_products_image', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_small_text', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_large_top_text', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_large_bottom_text', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_button_text', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_button_link', array( 'default' => __( '' ), 'forta_master' ) );
 
 	// Customizer Controls
 	// Company Information
@@ -141,20 +140,6 @@ function forta_master_customizer( $wp_customize ) {
 	    'type'	   => 'textarea',
 	) ) );
 
-	// Tagline
-	// $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_tagline', array(
-	//     'label'    => __( 'Tagline', 'forta_master' ),
-	//     'section'  => 'forta_master_tagline_section',
-	//     'settings' => 'forta_master_tagline',
-	// ) ) );
-
-	// Logo
-	// $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'forta_master_logo', array(
-	//     'label'    => __( 'Logo', 'forta_master' ),
-	//     'section'  => 'forta_master_logo_section',
-	//     'settings' => 'forta_master_logo',
-	// ) ) );
-
 	// Social Media
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_social_facebook_link', array(
 	    'label'    => __( 'Facebook Link', 'forta_master' ),
@@ -204,11 +189,49 @@ function forta_master_customizer( $wp_customize ) {
 	'settings'   => 'forta_master_accent_color',
 	) ) );
 
-	// Social Media
+	// Privacy Policy
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_privacy_policy', array(
 	    'label'    => __( 'Privacy Policy Link', 'forta_master' ),
 	    'section'  => 'forta_master_privacy_section',
 	    'settings' => 'forta_privacy_policy',
+	) ) );
+
+	// Product Pages
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'forta_master_products_image', array(
+		'description' => __( 'Upload the image that will be used as the background' ),
+	    'label'    => __( 'Call To Action Image', 'forta_master' ),
+	    'section'  => 'forta_master_product_section',
+	    'settings' => 'forta_master_products_image',
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_small_text', array(
+	    'label'    => __( 'Call To Action Small Text', 'forta_master' ),
+	    'section'  => 'forta_master_product_section',
+	    'settings' => 'forta_master_small_text',
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_large_top_text', array(
+	    'label'    => __( 'Call To Action Large Text 1st Line', 'forta_master' ),
+	    'section'  => 'forta_master_product_section',
+	    'settings' => 'forta_master_large_top_text',
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_large_bottom_text', array(
+	    'label'    => __( 'Call To Action Large Text 2nd Line', 'forta_master' ),
+	    'section'  => 'forta_master_product_section',
+	    'settings' => 'forta_master_large_bottom_text',
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_button_text', array(
+	    'label'    => __( 'Call To Action Button Text', 'forta_master' ),
+	    'section'  => 'forta_master_product_section',
+	    'settings' => 'forta_master_button_text',
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_button_link', array(
+	    'label'    => __( 'Call To Action Button Link', 'forta_master' ),
+	    'section'  => 'forta_master_product_section',
+	    'settings' => 'forta_master_button_link',
 	) ) );
 }
 

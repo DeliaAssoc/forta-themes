@@ -78,22 +78,27 @@ jQuery(document).ready(function($) {
 
 	// Lock header to top of window navigation when scrollpoint reached
 	$( window ).on( 'scroll', function(){
-		var $winScroll = $( window ).scrollTop(),
 
-		$headerScroll = $mainHeaderHome.offset().top,
-		$contentScroll = $( '.homepage.content-area' ).offset().top,
-		$topOffset = $winScroll + $sitopLeftHeight;
-		$blockHeight = $sitopLeftHeight + $headerBlock;
+		//  Test if variable has length(on homepage or not)
+		if ( $mainHeaderHome.length > 0 ) {
+
+			var $winScroll = $( window ).scrollTop(),
+
+			$headerScroll = $mainHeaderHome.offset().top,
+			$contentScroll = $( '.homepage.content-area' ).offset().top,
+			$topOffset = $winScroll + $sitopLeftHeight;
+			$blockHeight = $sitopLeftHeight + $headerBlock;
 
 
-		if ( $headerScroll < $topOffset )
-		{
-			$mainHeader.addClass( 'locked' );
-		}
+			if ( $headerScroll < $topOffset )
+			{
+				$mainHeader.addClass( 'locked' );
+			}
 
-		if ( $contentScroll > $winScroll + $blockHeight )
-		{
-			$mainHeader.removeClass( 'locked' );
+			if ( $contentScroll > $winScroll + $blockHeight )
+			{
+				$mainHeader.removeClass( 'locked' );
+			}
 		}
 	});
 
@@ -153,5 +158,16 @@ jQuery(document).ready(function($) {
 		{
 			$btt.removeClass( 'visible' );
 		}
+	});
+
+	// Parallax effect on secondary page header images
+	$( window ).scroll( function(){
+
+		var $headerImage = $( '.header-image' ),
+			wScroll = $( this ).scrollTop();
+
+		$headerImage.css({
+			'background-position-y' : -wScroll /8,
+		});
 	});
 });

@@ -156,10 +156,14 @@
 
 }
 
+.page-template-homepage .main-header {
+	background-color: rgba( $darkest, .5 );
+}
+
 .main-header {
 	position: absolute;
 	top: 74px;
-	background-color: rgba( $darkest, 0.5 );
+	background-color: rgba( $darkest, 1 );
 	padding: 15px 0;
 	width: 100%;
 	z-index: 10;

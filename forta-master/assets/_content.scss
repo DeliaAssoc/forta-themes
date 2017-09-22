@@ -3,7 +3,6 @@
 --------------------------------------------------------------*/
 
 // Homepage
-
 .homepage.content-area {
 	position: relative;
 	margin-top: 100vh;
@@ -30,6 +29,60 @@
 }
 
 .animated {
-    -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
-    animation-delay: 2s;
+    -webkit-animation-delay: 1.5s; /* Safari 4.0 - 8.0 */
+    animation-delay: 1.5s;
+}
+
+// Secondary Pages
+.secondary {
+
+	.header-image {
+		min-height: 320px;
+		background-attachment: fixed;
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.main-block {
+		padding: 30px 0 0 0;
+	}
+
+	.subtitle {
+		font-weight: 500;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+	.pro-cta {
+		color: $white-color;
+		padding: 30px 0;
+		text-align: center;
+
+		.small-text,
+		.large-text,
+		a {
+			display: inline-block;
+		}
+
+		.small-text {
+			font-weight: 500;
+			letter-spacing: 3px;
+		}
+
+		.large-text {
+			font-family: 'Raleway', Helvetica, Arial, sans-serif;
+			font-size: 20px;
+			font-weight: 500;
+			line-height: 1.25em;
+		}
+
+		a {
+			color: $white-color;
+		}
+	}
+
+	.cta-btn {
+		margin: 20px 0 0 0;
+	}
 }

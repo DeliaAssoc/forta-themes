@@ -34,12 +34,12 @@
 						<div class="footer-contact compinfo-column">
 								<?php if ( get_theme_mod( 'forta_master_company_phone' ) ) : ?>
 									<span class="contact">
-										<span class="title">Phone:</span> <?php echo get_theme_mod( 'forta_master_company_phone' ); ?>
+										<span class="title">Phone:</span> <a href="<?php echo get_theme_mod( 'forta_master_company_phone' ); ?>"><?php echo get_theme_mod( 'forta_master_company_phone' ); ?></a>
 									</span>
 								<?php endif; ?>
 								<?php if ( get_theme_mod( 'forta_master_company_tollfree' ) ) : ?>
 									<span class="contact">
-										<span class="title">Toll Free:</span> <?php echo get_theme_mod( 'forta_master_company_tollfree' ); ?>
+										<span class="title">Toll Free:</span> <a href="<?php echo get_theme_mod( 'forta_master_company_tollfree' ); ?>"><?php echo get_theme_mod( 'forta_master_company_tollfree' ); ?></a>
 									</span>
 								<?php endif; ?>
 								<?php if ( get_theme_mod( 'forta_master_company_fax' ) ) : ?>
