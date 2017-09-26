@@ -86,3 +86,26 @@
 		margin: 20px 0 0 0;
 	}
 }
+
+// Products Listing Page
+
+.page-template-products-template {
+
+	.site-content {
+		padding: 191px 0 0 0;
+	}
+
+	.product-page-info {
+
+		.flexxed {
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+		}
+	}
+
+	h1.products-heading {
+		color: $darkest;
+	}
+}

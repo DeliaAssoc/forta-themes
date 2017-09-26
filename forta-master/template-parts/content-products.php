@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page.php
+ * Template part for displaying page content in product(s)-template.php
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -8,50 +8,76 @@
  */
 
 ?>
-	<?php $headerImage = get_field( 'header_image' ); ?>
-	<section class="header-image" style="background-image: url( '<?php echo $headerImage[ 'url' ] ?>' );" alt="<?php echo $headerImage[ 'alt' ] ?>"></section>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="constrain">
-		<div class="main-block">
-			<header class="entry-header">
-				<div class="subtitle site-font-accent"><?php the_field( 'sub_title' ); ?></div>
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			</header><!-- .entry-header -->
 
-			<div class="entry-content">
-				<?php
-					the_content();
-				?>
-			</div><!-- .entry-content -->
-		</div><!-- .main-block -->
-		<aside class="product-sidebar">
-			
-			<?php if ( have_rows( 'sidebar_content' ) ) : ?>
-				<?php while ( have_rows( 'sidebar_content' ) ) : the_row(); ?>
-
-					<div class="side-pro-block">
-						<?php the_sub_field( 'sidebar_content_block' ); ?>
-					</div>
-
-				<?php endwhile; ?>
-			<?php endif; ?>
-
-		</aside>
-	</div>
-
-	<?php if ( get_theme_mod( 'forta_master_large_text' ) ) : ?>
-	<section class="pro-cta" style="background-image: url( '<?php echo get_theme_mod( 'forta_master_products_image' ); ?>' );">
+	<section class="product-page-info">
 		<div class="constrain">
-			<div class="left-block">
-				<span class="small-text site-font-accent"><?php echo get_theme_mod( 'forta_master_small_text' ); ?></span>
-				<span class="large-text top"><?php echo get_theme_mod( 'forta_master_large_top_text' ); ?></span>
-				<span class="large-text bottom"><?php echo get_theme_mod( 'forta_master_large_bottom_text' ); ?></span>
-			</div>
-			<div class="right-block">
-				<a class="cta-btn site-accent" href="<?php echo get_theme_mod( 'forta_master_button_link' ); ?>"><?php echo get_theme_mod( 'forta_master_button_text' ); ?></a>
+			<h1 class="products-heading"><?php the_title(); ?></h1>
+			<div class="flexxed">
+				<div class="sub-text">
+					<?php the_field( 'sub_text' ); ?>
+				</div>
+				<div class="page-description">
+					<?php the_content(); ?>
+				</div>
 			</div>
 		</div>
 	</section>
-	<?php endif; ?>
+	<section class="products-list">
+		
+		<?php
+
+			$categories = get_categories( 'products' );
+
+			if ( count($categories)  > 1 ) : ?>
+				
+				<ul class="product-tabs">
+
+					<!-- Output list of product categories as tab list -->
+				<?php $i = 1; ?>
+				<?php foreach ( $categories as $category ) { ?>
+
+					<li><a data-ref="tabblock<?php echo $i; ?>" href="#">
+						<?php echo $category->name; ?>
+					</a></li>
+					<?php $i++;
+			  	} ?>
+
+				</ul>
+
+				<div class="product-lists">
+				
+				<div class="catid"><!-- Grab all products from all categories -->
+					
+						<?php $i = 1; ?>
+						<?php foreach ( $categories as $category ) { ?>
+							<?php $catId = $category->term_taxonomy_id ?>
+							<div id="tabblock<?php echo $i; ?>">
+							
+								<?php $products = new WP_Query( 'post_type=products&cat=' . $catId ); ?>
+
+								
+								<?php while ( $products->have_posts() ) : $products->the_post(); ?>
+
+									<?php the_title(); ?>
+
+								<?php endwhile; ?>
+
+
+
+								<?php wp_reset_query(); ?>
+							</div>
+							<?php $i++; ?>
+						<?php } ?>
+						
+							</div>
+
+				</div>
+
+				
+			 <?php endif; ?>
+
+	</section>
 
 </article><!-- #post-<?php the_ID(); ?> -->

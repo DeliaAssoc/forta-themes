@@ -38,8 +38,11 @@ $socialArray = array(
 
 	<?php if ( get_theme_mod( 'forta_master_accent_color' ) ) : ?>
 	<style>
+		::-moz-selection { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>;}
+		::selection { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.site-accent { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.site-font-accent { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.main-header a:hover { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.site-accent-border { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important;  }
 		.main-navigation li a:hover { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.footer-menu li a:hover { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }

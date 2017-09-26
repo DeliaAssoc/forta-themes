@@ -1,6 +1,7 @@
 <?php
 /**
  * Template Name: Product Template
+ * Template Post Type: products
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *

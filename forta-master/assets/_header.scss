@@ -40,7 +40,7 @@
 	background-color: $black-color;
 	padding: 10px 0;
 	overflow-y: auto;
-	z-index: 999;
+	z-index: 9999;
 
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
@@ -162,7 +162,7 @@
 
 .main-header {
 	position: absolute;
-	top: 74px;
+	top: 70px;
 	background-color: rgba( $darkest, 1 );
 	padding: 15px 0;
 	width: 100%;

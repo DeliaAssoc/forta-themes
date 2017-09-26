@@ -382,7 +382,7 @@ div.wpcf7 .ajax-loader {
   font-size: 40px;
   left: 11px;
   position: absolute;
-  top: -11px;
+  top: 7px;
 }
 
 /*--------------------------------------------------------------
@@ -876,7 +876,7 @@ a:active {
   background-color: #000000;
   padding: 10px 0;
   overflow-y: auto;
-  z-index: 999;
+  z-index: 9999;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
@@ -974,7 +974,7 @@ a:active {
 
 .main-header {
   position: absolute;
-  top: 74px;
+  top: 70px;
   background-color: #333333;
   padding: 15px 0;
   width: 100%;
@@ -1110,6 +1110,19 @@ a:active {
   margin: 20px 0 0 0;
 }
 
+.page-template-products-template .site-content {
+  padding: 191px 0 0 0;
+}
+.page-template-products-template .product-page-info .flexxed {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.page-template-products-template h1.products-heading {
+  color: #333333;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1194,6 +1207,7 @@ a:active {
 
 .legal {
   color: #333333;
+  font-size: 12px;
   padding: 20px 0;
 }
 .legal a {
@@ -1573,7 +1587,7 @@ object {
 
   .main-header {
     position: fixed;
-    top: 64px;
+    top: 66px;
   }
   .main-header .flexxed {
     -webkit-box-align: center;
