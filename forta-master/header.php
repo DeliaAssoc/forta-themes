@@ -48,6 +48,10 @@ $socialArray = array(
 		.footer-menu li a:hover { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.footer-menu li a:before { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		h2, h3 { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>;border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> }
+		.products-lists-text .subtitle { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		a.products-btn { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		a.products-btn:hover { color: #fff; background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.product-tabs a.active { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 	</style>
 	<?php endif; ?>
 </head>

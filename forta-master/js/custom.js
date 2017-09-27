@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
 		$sitopLeftHeight = $siteTopLeft.outerHeight(),
 		$winWidth = $( window ).width(),
 		$winHeight = $( window ).height(),
-		$moreEllips = $( '#more-ellipsis' ),
+		$moreEllips = $( '.more-tab' ),
 		$topLeftClose = $siteTopLeft.find( '#close-this' ),
 		$quoteLink = $( '.top-quote a' ),
 		$topForm = $( '.top-form' ),
@@ -169,5 +169,32 @@ jQuery(document).ready(function($) {
 		$headerImage.css({
 			'background-position-y' : -wScroll /8,
 		});
+	});
+
+	$( '.product-tabs a' ).on( 'click', function( e ) {
+
+	  e.preventDefault();
+	  
+	  $allAnchors = $( '.product-tabs li a' ),
+	  $clicked = $( this ),
+	  $curTab = $clicked.data( 'ref' ),
+	  $allTabs = $( '.product-listings' ).find( '.tabBlock' ),
+	  $selectedTab = $( '.product-listings' ).find( '#' + $curTab );
+	  
+	  if ( !$selectedTab.hasClass( '.visible' ) ) {
+	   
+	    // Remove active from all tabs
+	    $allAnchors.removeClass( 'active' );
+	 
+	    // Add active to clicked tab
+	    $clicked.addClass( 'active' );
+	    
+	    // Hide all tab content
+	    $allTabs.removeClass( 'visible' );
+	    
+	    // Display selected tab content
+	    $selectedTab.addClass( 'visible' );
+	    
+	  } 
 	});
 });

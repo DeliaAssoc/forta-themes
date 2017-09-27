@@ -106,6 +106,15 @@ div.wpcf7 .ajax-loader {
 	padding: 10px 15px;
 }
 
+.products-btn {
+	background-color: $white-color;
+	border: 1px solid;
+	-webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,.15);
+	box-shadow: 2px 2px 5px 1px rgba(0,0,0,.15);
+	display: block;
+	padding: 5px 7px;
+}
+
 .back-to-top {
 	display: block;
 	border-radius: 3px;
