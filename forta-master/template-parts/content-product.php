@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in product-template.php
+ * Template part for displaying page content in single-product.php
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *

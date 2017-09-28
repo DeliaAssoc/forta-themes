@@ -19,6 +19,7 @@ jQuery(document).ready(function($) {
 		$hmSlides = $( '.home-slider' ).find( '.slide' ),
 		$vidOverlay = $( '.hm-vid-overlay' );
 
+
 	// If window is smaller than 1024px
 	if ( $winWidth < 1024 )
 	{
