@@ -13,7 +13,10 @@
 
 	<section class="products-page-info">
 		<div class="constrain">
-			<h1 class="products-heading"><?php the_title(); ?></h1>
+			<div class="heading-wrapper">
+				<h1 class="products-heading"><?php the_title(); ?></h1>
+				<div class="custom-hr"></div>
+			</div>
 			<div class="flexxed">
 				<div class="sub-text">
 					<?php the_field( 'sub_text' ); ?>
@@ -26,7 +29,7 @@
 	</section>
 	<section class="products-tab-list">
 		<div class="constrain">
-			<div class="tab-text">Please select a product category below.</div>
+			<div class="tab-text site-font-accent">Please select a product category below.</div>
 		<?php
 			$categories = get_categories( 'products' );
 
@@ -65,8 +68,7 @@
 
 									<?php if ( has_post_thumbnail() ) : ?>
 
-									<div class="products-list-image">
-										<?php the_post_thumbnail(); ?>
+									<div class="products-list-image" style="background-image: url( <?php echo get_the_post_thumbnail_url(); ?> );">
 									</div>
 
 									<?php endif; ?>
@@ -80,8 +82,8 @@
 										<?php the_excerpt(); ?>
 
 										<div class="products-btns-wrapper">
-											<a href="#" class="products-btn site-accent-border">FAQ</a>
-											<a href="<?php the_permalink(); ?>" class="products-btn site-accent-border">More Info</a>
+											<a href="#" class="products-btn site-accent-border">FAQs</a>
+											<a href="<?php the_permalink(); ?>" class="products-btn site-accent-border">More Details</a>
 											<a href="#" class="products-btn site-accent-border">Request a Quote</a>
 										</div>
 

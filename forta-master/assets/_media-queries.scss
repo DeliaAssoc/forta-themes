@@ -11,6 +11,29 @@
 		}
 	}
 
+	// Products Listing Page
+	.product-tabs {
+
+		li {
+			padding: 3px 10px;
+			width: auto;
+		}
+	}
+
+	.products-list-image {
+		height: 300px;
+	}
+	
+	.products-btns-wrapper {
+		float: right;
+		width: 370px;
+	}
+
+	.products-btn {
+		font-size: 16px;
+		padding: 5px 15px;
+	}
+
 	// Footer
 	.footer-menus {
 		display: -webkit-box;
@@ -28,8 +51,30 @@
 			width: 47.5%;
 		}
 	}
+}
 
+@media only screen and ( min-width: 568px ) {
 
+	.page-template-products-template {
+
+		.heading-wrapper {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			margin: 0 0 20px 0;
+		}
+
+		h1.products-heading {
+			display: inline-block;
+			font-size: 54px;
+		}
+
+		.custom-hr {
+			border-bottom: 4px solid $lt-gray;
+			margin: 0 0 0 20px;
+			width: 100%;
+		}
+	}
 }
 
 @media only screen and ( min-width: 640px ) {
@@ -47,6 +92,41 @@
 				display: block;
 			}
 		}
+	}
+
+	// Products Listing Page
+	.page-template-products-template {
+
+		h1.products-heading {
+			font-size: 64px;
+		}
+
+		.custom-hr {
+			height: 60px;
+		}
+	}
+
+	.product-tabs {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+
+	.product-listings {
+
+		.product-info {
+			margin: 0 0 20px 0;
+		}
+	}
+
+	.products-lists-text {
+		padding: 30px 50px;
 	}
 }
 
@@ -66,6 +146,66 @@
 				font-size: 36px;
 			}
 		}		
+	}
+
+	// Products Listing Page
+	.page-template-products-template {
+
+		h1.products-heading {
+			font-size: 74px;
+		}
+
+		.custom-hr {
+			height: 70px;
+		}
+
+		.products-page-info {
+
+			.sub-text {
+				font-size: 24px;
+				line-height: 1.25em;
+			}
+		}
+	}
+
+	.product-info {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		            flex-grow: 1;
+		margin: 0 0 30px 0;
+
+		&:nth-of-type( even ) {
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: reverse;
+			    -ms-flex-direction: row-reverse;
+			        flex-direction: row-reverse;
+		}
+
+		&:last-of-type {
+			margin: 0;
+		}
+ 	}
+
+	.products-list-image {
+		height: initial;
+		width: 35%;
+	}
+
+	.products-lists-text {
+		width: 65%;
+	}
+
+	.products-list-heading {
+		margin: 0 0 0 -20px;
+	}
+
+	.products-btns-wrapper {
+		float: none;
 	}
 
 	// Footer
@@ -122,6 +262,36 @@
 	}
 }
 
+@media only screen and ( min-width: 860px ) {
+
+	.page-template-products-template {
+
+		.products-page-info {
+
+			.flexxed {
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				    -ms-flex-direction: row;
+				        flex-direction: row;
+			}
+
+			.sub-text {
+				padding: 15px;
+				width: 35%;
+			}
+
+			.page-description {
+				padding: 15px;
+				width: 65%;
+
+				p {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
 @media only screen and ( min-width: 960px ) {
 
 	// Secondary Pages
@@ -172,6 +342,47 @@
 		.cta-btn {
 			margin: 0;
 		}
+	}
+
+	// Products Listing Page
+	.page-template-products-template {
+
+		h1.products-heading {
+			font-size: 100px;
+		}
+
+		.custom-hr {
+			height: 95px;
+		}
+
+		.products-page-info {
+
+			.sub-text {
+				font-size: 30px;
+				padding: 20px;
+				width: 45%;
+			}
+
+			.page-description {
+				padding: 20px;
+				width: 55%;
+			}
+		}
+	}
+
+	.product-listings {
+
+		.product-info {
+			margin: 0 0 45px 0;
+		}
+	}
+
+	.products-list-image {
+		width: 50%;
+	}
+
+	.products-lists-text {
+		width: 50%;
 	}
 
 	// Footer
@@ -291,7 +502,8 @@
 
 	.more-tab {
 		display: none;
-		flex-basis: 0;
+		-ms-flex-preferred-size: 0;
+		    flex-basis: 0;
 	}
 
 	.mobile-nav {
@@ -425,6 +637,8 @@
 
 	
 	article .constrain {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 	}
 
@@ -444,6 +658,25 @@
 
 		.pro-cta {
 			padding: 65px 0;
+		}
+	}
+
+	// Products Listing Page
+	.page-template-products-template {
+
+		article .constrain {
+			display: block;
+		}
+	}
+
+	.side-pro-block {
+		max-width: 327px;
+	}
+
+	.product-listings {
+
+		.product-info {
+			margin: 0 0 60px 0;
 		}
 	}
 

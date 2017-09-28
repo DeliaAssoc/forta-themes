@@ -1,6 +1,7 @@
 <?php
 /**
- * Template Name: Products List Template
+ * Template Name: Product Template
+ * Template Post Type: products
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -10,13 +11,13 @@
 get_header(); ?>
 
 
-	<div id="primary" class="products content-area">
+	<div id="primary" class="secondary content-area">
 		<main id="main" class="site-main">
 
 			<?php
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'products' );
+				get_template_part( 'template-parts/content', 'product' );
 
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :

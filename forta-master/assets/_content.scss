@@ -88,7 +88,6 @@
 }
 
 // Products Listing Page
-
 .page-template-products-template {
 
 	.site-content {
@@ -122,7 +121,9 @@
 .products-tab-list {
 
 	.tab-text {
+		font-size: .65em;
 		text-align: center;
+	    text-transform: uppercase;
 	}
 }
 
@@ -147,7 +148,6 @@
 		color: $lt-gray;
 		font-size: 1.15em;
 		font-weight: 700;
-		// padding: 0 0 5px 0;
 		text-transform: uppercase;
 
 		&.active {
@@ -175,8 +175,17 @@
 	}
 }
 
+.products-list-image {
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: block;
+	height: 215px;
+}
+
 .products-lists-text {
 	display: block;
+	overflow: hidden;
 	padding: 15px 10px;
 
 	.subtitle {
