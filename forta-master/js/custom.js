@@ -17,7 +17,8 @@ jQuery(document).ready(function($) {
 		$mobileNavHeight = $mobileMenu.outerHeight(),
 		$mobileClose = $mobileMenu.find( '#close-this' ),
 		$hmSlides = $( '.home-slider' ).find( '.slide' ),
-		$vidOverlay = $( '.hm-vid-overlay' );
+		$vidOverlay = $( '.hm-vid-overlay' ),
+		$secHeading = $( '.secondary' ).find( 'h1' );
 
 
 	// If window is smaller than 1024px
@@ -50,6 +51,19 @@ jQuery(document).ready(function($) {
 				$mobileMenu.css( 'left', -$winWidth );
 			});
 		});
+	}
+
+	if ( $winWidth > 1023 ) {
+
+		// Keep secondary page content and sidebar aligned
+		if ( $secHeading.outerHeight() > 55 )
+		{
+			$secHeading.css(
+			{
+				'fontSize' : '40px',
+				'height' : '55px'
+			});
+		}
 	}
 
 	// Open form block on 'Request a Quote' click
@@ -206,6 +220,7 @@ jQuery(document).ready(function($) {
 		'transitionOut'	:	'elastic',
 		'speedIn'		:	600, 
 		'speedOut'		:	200, 
-		'overlayShow'	:	false
+		'overlayShow'	:	true
 	});
+
 });
