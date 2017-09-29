@@ -14,8 +14,8 @@
 	<div class="constrain">
 		<div class="main-block">
 			<header class="entry-header">
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 				<div class="loc-date">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 					<?php the_field( 'location' ); ?>
 					<?php if ( get_field( 'date_of_project' ) ) : ?>
 						-
@@ -32,6 +32,24 @@
 		</div><!-- .main-block -->
 		<aside class="product-sidebar">
 			
+			<?php $gallery = get_field( 'project_gallery' ); ?>
+
+			<?php if ( $gallery ) : ?>
+				<div class="sidebar-gallery">
+					<h2 class="">Project Photos</h2>
+					<span class="instructions">Click on any image to enlarge</span>
+					<ul>
+						<?php foreach ( $gallery as $image ) : ?>
+							<li>
+								<a class="project_gallery" rel="gallery1" href="<?php echo $image[ 'url' ] ?>">
+									<img src="<?php echo $image[ 'url' ] ?>" alt="<?php echo $image[ 'alt' ] ?>">
+								</a>
+							</li>
+						<?php endforeach; ?>
+					</ul>
+				</div><!-- .sidebar-gallery -->
+			<?php endif; ?>
+
 			<?php if ( have_rows( 'sidebar_content' ) ) : ?>
 				<?php while ( have_rows( 'sidebar_content' ) ) : the_row(); ?>
 

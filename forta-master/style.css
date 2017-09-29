@@ -1094,6 +1094,15 @@ a:active {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+.secondary .entry-title {
+  text-transform: uppercase;
+}
+.secondary .loc-date {
+  text-transform: uppercase;
+}
+.secondary .product-sidebar {
+  margin: 0 0 20px 0;
+}
 .secondary .pro-cta {
   color: #FFFFFF;
   padding: 30px 0;
@@ -1119,6 +1128,21 @@ a:active {
 }
 .secondary .cta-btn {
   margin: 20px 0 0 0;
+}
+
+.sidebar-gallery .instructions {
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 0 10px 0;
+}
+.sidebar-gallery ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .page-template-products-template .site-content {
@@ -1422,6 +1446,21 @@ object {
     font-size: 28px;
   }
 
+  .sidebar-gallery ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .sidebar-gallery li {
+    width: 49%;
+  }
+
   .product-tabs li {
     padding: 3px 10px;
     width: auto;
@@ -1480,6 +1519,10 @@ object {
   }
   .secondary .pro-cta .large-text {
     display: block;
+  }
+
+  .sidebar-gallery li {
+    width: 32.5%;
   }
 
   .page-template-products-template h1.products-heading {
@@ -1618,6 +1661,10 @@ object {
   }
 }
 @media only screen and (min-width: 860px) {
+  .sidebar-gallery li {
+    width: 24.5%;
+  }
+
   .page-template-products-template .products-page-info .flexxed {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1935,10 +1982,18 @@ object {
     width: 72.5%;
   }
   .secondary .product-sidebar {
+    max-width: 327px;
     padding: 45px 0 0 0;
   }
   .secondary .pro-cta {
     padding: 65px 0;
+  }
+
+  .sidebar-gallery h2 {
+    margin-top: 10px;
+  }
+  .sidebar-gallery li {
+    width: 49%;
   }
 
   .page-template-products-template article .constrain {

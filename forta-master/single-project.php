@@ -11,7 +11,7 @@
 get_header(); ?>
 
 
-	<div id="primary" class="project content-area">
+	<div id="primary" class="secondary content-area">
 		<main id="main" class="site-main">
 
 			<?php

@@ -172,6 +172,7 @@ jQuery(document).ready(function($) {
 		});
 	});
 
+	// Tabs
 	$( '.product-tabs a' ).on( 'click', function( e ) {
 
 	  e.preventDefault();
@@ -197,5 +198,14 @@ jQuery(document).ready(function($) {
 	    $selectedTab.addClass( 'visible' );
 	    
 	  } 
+	});
+
+	// Initialize Fancybox
+	$("a.project_gallery").fancybox({
+		'transitionIn'	:	'elastic',
+		'transitionOut'	:	'elastic',
+		'speedIn'		:	600, 
+		'speedOut'		:	200, 
+		'overlayShow'	:	false
 	});
 });

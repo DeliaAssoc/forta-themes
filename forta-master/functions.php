@@ -112,12 +112,21 @@ function forta_master_scripts() {
 	// Add slick-theme.css
 	wp_enqueue_style( 'forta-master-slicktheme-style', get_template_directory_uri() . '/css/slick-theme.css' );
 
+	// Add facybox.css
+	wp_enqueue_style( 'forta-master-fancybox-style', get_template_directory_uri() . '/css/jquery.fancybox-1.3.4.css' );
+
 	wp_enqueue_style( 'forta-master-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'forta-master-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	// Add slick.js
 	wp_enqueue_script( 'forta-master-slick-js', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '20151215', true );
+
+	// Add fancybox.js
+	wp_enqueue_script( 'forta-master-fancybox-js', get_template_directory_uri() . '/js/fancybox/jquery.fancybox-1.3.4.js', array( 'jquery' ), '20151215', true );
+
+	// Add fancybox-easing.js
+	wp_enqueue_script( 'forta-master-fancyboxeasing-js', get_template_directory_uri() . '/js/fancybox/jquery.easing-1.3.pack.js', array( 'jquery' ), '20151215', true );
 
 	wp_enqueue_script( 'forta-master-custom-js', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '20151215', true );
 
