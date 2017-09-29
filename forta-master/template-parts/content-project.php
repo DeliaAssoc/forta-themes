@@ -32,33 +32,48 @@
 		</div><!-- .main-block -->
 		<aside class="product-sidebar">
 			
-			<?php $gallery = get_field( 'project_gallery' ); ?>
+		<!-- Sidebar Flexible Content -->
+		<?php if ( have_rows( 'sidebar_multi_content' ) ) :
 
-			<?php if ( $gallery ) : ?>
-				<div class="sidebar-gallery">
-					<h2 class="">Project Photos</h2>
-					<span class="instructions">Click on any image to enlarge</span>
-					<ul>
-						<?php foreach ( $gallery as $image ) : ?>
-							<li>
-								<a class="project_gallery" rel="gallery1" href="<?php echo $image[ 'url' ] ?>">
-									<img src="<?php echo $image[ 'url' ] ?>" alt="<?php echo $image[ 'alt' ] ?>">
-								</a>
-							</li>
-						<?php endforeach; ?>
-					</ul>
-				</div><!-- .sidebar-gallery -->
-			<?php endif; ?>
+			while ( have_rows( 'sidebar_multi_content' ) ) : the_row();
 
-			<?php if ( have_rows( 'sidebar_content' ) ) : ?>
-				<?php while ( have_rows( 'sidebar_content' ) ) : the_row(); ?>
+				if ( get_row_layout() == 'block_content' ) :
 
-					<div class="side-pro-block">
-						<?php the_sub_field( 'sidebar_content_block' ); ?>
-					</div>
+					the_sub_field( 'content' ); // Block Content
 
-				<?php endwhile; ?>
-			<?php endif; ?>
+				endif;
+
+				if ( get_row_layout() == 'gallerys' ) :
+
+				 $gallery = get_sub_field( 'gallery_images' ); ?>
+
+					<?php if ( $gallery ) : ?>
+
+						<div class="sidebar-gallery">
+							<h2 class="">Project Photos</h2>
+							<span class="instructions">Click on any image to enlarge</span>
+							<ul>
+
+								<?php foreach ( $gallery as $image ) : ?>
+
+									<li>
+										<a class="project_gallery" rel="gallery1" href="<?php echo $image[ 'url' ] ?>">
+											<img src="<?php echo $image[ 'url' ] ?>" alt="<?php echo $image[ 'alt' ] ?>">
+										</a>
+									</li>
+
+								<?php endforeach; ?>
+								
+							</ul>
+						</div><!-- .sidebar-gallery -->
+
+				 	<?php endif; ?>
+
+				<?php endif; ?>
+
+			<?php endwhile; ?>
+
+		<?php endif; ?>
 
 		</aside>
 	</div>
