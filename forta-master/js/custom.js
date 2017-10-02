@@ -186,6 +186,11 @@ jQuery(document).ready(function($) {
 		});
 	});
 
+
+	// Set 1st product tab and tab content to visible on page load 
+	$( '.product-tabs' ).find( 'li' ).first().find( 'a' ).addClass( 'active' );
+	$( '.product-listings' ).find( '.tabBlock' ).first().addClass( 'visible' );
+
 	// Tabs
 	$( '.product-tabs a' ).on( 'click', function( e ) {
 
