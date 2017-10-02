@@ -452,9 +452,14 @@
 	.legal {
 
 		.footer-block {
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
-			flex-direction: row;
-			width: 50%;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+			width: 60%;
 		}
 
 		.legal-box {

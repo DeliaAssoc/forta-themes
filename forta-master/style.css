@@ -1783,7 +1783,7 @@ object {
   .legal .footer-block {
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 60%;
   }
   .legal .legal-box {
     font-size: 15px;

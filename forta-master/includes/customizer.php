@@ -2,6 +2,12 @@
 function forta_master_customizer( $wp_customize ) {
 
 	// Customizer Sections
+	// Logo
+	$wp_customize->add_section( 'forta_master_logo_section' , array(
+	    'title'       => __( 'Company Logo', 'forta_master' ),
+	    'priority'    => 10,
+	    'description' => 'Add Company Logo',
+	) );
 	// Company Information
 	$wp_customize->add_section( 'forta_master_companyinfo_section' , array(
 	    'title'       => __( 'Company Information', 'forta_master' ),
@@ -42,6 +48,9 @@ function forta_master_customizer( $wp_customize ) {
 
 
 	// Customizer Settings
+	// Logo Section
+	$wp_customize->add_setting( 'forta_master_logo_section' );
+	$wp_customize->add_setting( 'forta_master_logo', array( 'default' => __( '' ), 'forta_master' ) );
 	// Company Information
 	$wp_customize->add_setting( 'forta_master_companyinfo_section', array( 'default' => __( '' ), 'forta_master' ) );
 	$wp_customize->add_setting( 'forta_master_company_street', array( 'default' => __( '' ), 'forta_master' ) );
@@ -78,6 +87,14 @@ function forta_master_customizer( $wp_customize ) {
 	$wp_customize->add_setting( 'forta_master_button_link', array( 'default' => __( '' ), 'forta_master' ) );
 
 	// Customizer Controls
+	// Company Logo
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'forta_master_logo', array(
+		'description' => __( 'Upload division logo here' ),
+	    'label'    => __( 'Site Logo', 'forta_master' ),
+	    'section'  => 'forta_master_logo_section',
+	    'settings' => 'forta_master_logo',
+	) ) );
+
 	// Company Information
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_street', array(
 	    'label'    => __( 'Street Address', 'forta_master' ),
