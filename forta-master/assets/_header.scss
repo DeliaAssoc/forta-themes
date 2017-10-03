@@ -156,6 +156,32 @@
 
 }
 
+.menu-item-has-children {
+	position: relative;
+
+	.fa {
+		display: block;
+		height: 36px;
+		position: absolute;
+		right: 0;
+		width: 36px;
+
+		&:before {
+			left: 0;
+			margin: 0 auto;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			top: 9px;
+		}
+	}
+
+	ul.sub-menu {
+		display: none;
+		position: relative;
+	}
+}
+
 .page-template-homepage .main-header {
 	background-color: rgba( $darkest, .5 );
 }
@@ -196,6 +222,7 @@
 .main-navigation,
 .mobile-nav {
 	font-weight: 300;
+	overflow: auto;
 	text-transform: uppercase;
 
 	a {

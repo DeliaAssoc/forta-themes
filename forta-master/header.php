@@ -32,7 +32,16 @@ $socialArray = array(
 	<script src="https://use.fontawesome.com/d0180db23a.js"></script>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway:600,700|Roboto:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:600,700|Roboto:100,300,400,500,700" rel="stylesheet">
+
+	<link rel="apple-touch-icon" sizes="120x120" href="<?php echo get_template_directory_uri(); ?>/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/favicons/favicon-16x16.png">
+	<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/favicons/manifest.json">
+	<link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicons/favicon.ico">
+	<meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
 
 	<?php wp_head(); ?>
 
@@ -43,8 +52,10 @@ $socialArray = array(
 		.site-accent { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.site-font-accent { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.main-header a:hover { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
-		.site-accent-border { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important;  }
+		.site-accent-border { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important; }
+		.slider-btn { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> !important; }
 		.main-navigation li a:hover { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
+		.main-navigation .menu-main-menu-container ul.sub-menu { background-color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.footer-menu li a:hover { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.footer-menu li a:before { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		h2, h3 { color:  <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>;border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> }

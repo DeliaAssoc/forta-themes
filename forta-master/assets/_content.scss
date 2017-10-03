@@ -17,6 +17,42 @@
 	.slide {
 		background-size: cover;
 	}
+
+	.constrain {
+		height: 100vh;
+		position: relative;
+	}
+
+	h1, h2, h3 {
+		border: 0 !important;
+		color: initial !important;
+		font-family: $rale-font;
+		text-transform: initial;
+	}
+}
+
+.slider-text {
+	left: 0;
+	margin: 0 auto;
+	padding: 0 10px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 45%;
+	width: 100%;
+	z-index: 999;
+
+	h2 {
+		font-size: 36px;
+		font-weight: 500;
+		margin: 0;
+		padding: 0;
+	}
+
+	p {
+		font-weight: 100;
+		text-transform: uppercase;
+	}
 }
 
 .hm-vid-overlay {
@@ -26,11 +62,12 @@
 	background: url('images/darth-stripe.png');
 	display: block;
 	width: 100%;
+	z-index: 10;
 }
 
 .animated {
-    -webkit-animation-delay: 1.5s; /* Safari 4.0 - 8.0 */
-    animation-delay: 1.5s;
+    -webkit-animation-delay: 1s; /* Safari 4.0 - 8.0 */
+    animation-delay: 1s;
 }
 
 // Secondary Pages

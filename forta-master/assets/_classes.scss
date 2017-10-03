@@ -102,6 +102,27 @@ div.wpcf7 .ajax-loader {
 	text-transform: uppercase;
 }
 
+.slider-btn {
+	border: 2px solid;
+	display: inline-block;
+	font-family: $rale-font;
+	font-size: 18px;
+	letter-spacing: .5px;
+	margin: 20px auto 0 auto;
+	padding: 7px 0 5px 10px;
+	position: relative;
+	text-align: left;
+	text-transform: uppercase;
+	width: 80%;
+
+	&:after {
+		content: '\f105';
+		font-family: $fa;
+		position: absolute;
+		right: 10px;
+	}
+}
+
 .cta-btn {
 	padding: 10px 15px;
 }

@@ -343,6 +343,26 @@ div.wpcf7 .ajax-loader {
   text-transform: uppercase;
 }
 
+.slider-btn {
+  border: 2px solid;
+  display: inline-block;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  letter-spacing: .5px;
+  margin: 20px auto 0 auto;
+  padding: 7px 0 5px 10px;
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
+  width: 80%;
+}
+.slider-btn:after {
+  content: '\f105';
+  font-family: "FontAwesome", sans-serif;
+  position: absolute;
+  right: 10px;
+}
+
 .cta-btn {
   padding: 10px 15px;
 }
@@ -694,18 +714,8 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-  color: royalblue;
-}
-
 a:visited {
-  color: purple;
-}
-
-a:hover,
-a:focus,
-a:active {
-  color: midnightblue;
+  color: #FFFFFF;
 }
 
 a:focus {
@@ -979,6 +989,29 @@ a:active {
   margin: 0 0 10px 0;
 }
 
+.menu-item-has-children {
+  position: relative;
+}
+.menu-item-has-children .fa {
+  display: block;
+  height: 36px;
+  position: absolute;
+  right: 0;
+  width: 36px;
+}
+.menu-item-has-children .fa:before {
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 9px;
+}
+.menu-item-has-children ul.sub-menu {
+  display: none;
+  position: relative;
+}
+
 .page-template-homepage .main-header {
   background-color: rgba(51, 51, 51, 0.5);
 }
@@ -1014,6 +1047,7 @@ a:active {
 .main-navigation,
 .mobile-nav {
   font-weight: 300;
+  overflow: auto;
   text-transform: uppercase;
 }
 .main-navigation a,
@@ -1063,6 +1097,38 @@ a:active {
 .home-slider .slide {
   background-size: cover;
 }
+.home-slider .constrain {
+  height: 100vh;
+  position: relative;
+}
+.home-slider h1, .home-slider h2, .home-slider h3 {
+  border: 0 !important;
+  color: initial !important;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  text-transform: initial;
+}
+
+.slider-text {
+  left: 0;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 45%;
+  width: 100%;
+  z-index: 999;
+}
+.slider-text h2 {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+.slider-text p {
+  font-weight: 100;
+  text-transform: uppercase;
+}
 
 .hm-vid-overlay {
   position: absolute;
@@ -1071,12 +1137,13 @@ a:active {
   background: url("images/darth-stripe.png");
   display: block;
   width: 100%;
+  z-index: 10;
 }
 
 .animated {
-  -webkit-animation-delay: 1.5s;
+  -webkit-animation-delay: 1s;
   /* Safari 4.0 - 8.0 */
-  animation-delay: 1.5s;
+  animation-delay: 1s;
 }
 
 .secondary .header-image {
@@ -1442,6 +1509,18 @@ object {
 }
 
 @media only screen and (min-width: 480px) {
+  .slider-btn {
+    width: 53%;
+  }
+
+  .slider-text {
+    max-width: 100%;
+  }
+  .slider-text h2 {
+    font-size: 55px;
+    padding: 0 0 5px 0;
+  }
+
   .secondary .pro-cta .large-text {
     font-size: 28px;
   }
@@ -1497,6 +1576,18 @@ object {
   }
 }
 @media only screen and (min-width: 568px) {
+  .slider-btn {
+    padding: 7px 10px;
+    width: 45%;
+  }
+
+  .slider-text h2 {
+    font-size: 60px;
+  }
+  .slider-text p {
+    font-size: 20px;
+  }
+
   .page-template-products-template .heading-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1514,6 +1605,10 @@ object {
   }
 }
 @media only screen and (min-width: 640px) {
+  .slider-btn {
+    width: 39%;
+  }
+
   .secondary .header-image {
     min-height: 450px;
   }
@@ -1553,6 +1648,19 @@ object {
   }
 }
 @media only screen and (min-width: 768px) {
+  .slider-btn {
+    margin: 30px auto 0 auto;
+    width: 32%;
+  }
+
+  .slider-text h2 {
+    font-size: 80px;
+    padding: 0 0 15px 0;
+  }
+  .slider-text p {
+    font-size: 22px;
+  }
+
   .secondary .header-image {
     min-height: 500px;
   }
@@ -1661,6 +1769,10 @@ object {
   }
 }
 @media only screen and (min-width: 860px) {
+  .slider-btn {
+    max-width: 243px;
+  }
+
   .sidebar-gallery li {
     width: 24.5%;
   }
@@ -1684,6 +1796,14 @@ object {
   }
 }
 @media only screen and (min-width: 960px) {
+  .slider-text h2 {
+    font-size: 100px;
+    padding: 0 0 25px 0;
+  }
+  .slider-text p {
+    font-size: 24px;
+  }
+
   .secondary .pro-cta {
     padding: 50px 0;
   }
@@ -1781,7 +1901,12 @@ object {
   }
 
   .legal .footer-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     width: 60%;
   }
@@ -1894,6 +2019,14 @@ object {
     top: 5px;
   }
 
+  .slider-text {
+    top: 37.5%;
+  }
+  .slider-text h2 {
+    font-size: 120px;
+    padding: 0 0 35px 0;
+  }
+
   .main-header {
     position: fixed;
     top: 66px;
@@ -1949,6 +2082,10 @@ object {
     -ms-flex-pack: distribute;
     justify-content: space-around;
     font-size: 14px;
+  }
+  .main-navigation .menu-main-menu-container ul.sub-menu {
+    display: none;
+    position: absolute;
   }
 
   .page-template-homepage .main-header {

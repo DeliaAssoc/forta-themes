@@ -1,5 +1,20 @@
 @media only screen and ( min-width: 480px ) {
 
+	// Classes
+	.slider-btn {
+		width: 53%;
+	}
+
+	// Homepage
+	.slider-text {
+		max-width: 100%;
+
+		h2 {
+			font-size: 55px;
+			padding: 0 0 5px 0;
+		}
+	}
+
 	// Secondary Pages
 	.secondary {
 
@@ -74,6 +89,24 @@
 
 @media only screen and ( min-width: 568px ) {
 
+	// Classes
+	.slider-btn {
+		padding: 7px 10px;
+		width: 45%;
+	}
+
+	// Homepage
+	.slider-text {
+
+		h2 {
+			font-size: 60px;
+		}
+
+		p {
+			font-size: 20px;
+		}
+	}
+
 	.page-template-products-template {
 
 		.heading-wrapper {
@@ -97,7 +130,12 @@
 }
 
 @media only screen and ( min-width: 640px ) {
-	
+
+	// Classes
+	.slider-btn {
+		width: 39%;
+	}
+
 	// Secondary Pages
 	.secondary {
 
@@ -157,6 +195,25 @@
 }
 
 @media only screen and ( min-width: 768px ) {
+
+	// Classes
+	.slider-btn {
+		margin: 30px auto 0 auto;
+		width: 32%;
+	}
+
+	// Homepage
+	.slider-text {
+
+		h2 {
+			font-size: 80px;
+			padding: 0 0 15px 0;
+		}
+
+		p {
+			font-size: 22px;
+		}
+	}
 
 	// Secondary Pages
 	.secondary {
@@ -290,6 +347,11 @@
 
 @media only screen and ( min-width: 860px ) {
 
+	// Classes
+	.slider-btn {
+		max-width: 243px;
+	}
+
 	// Secondary Pages
 	.sidebar-gallery {
 
@@ -327,6 +389,19 @@
 }
 
 @media only screen and ( min-width: 960px ) {
+
+	// Homepage
+	.slider-text {
+
+		h2 {
+			font-size: 100px;
+			padding: 0 0 25px 0;
+		}
+
+		p {
+			font-size: 24px;
+		}
+	}
 
 	// Secondary Pages
 	.secondary {
@@ -553,6 +628,7 @@
 		display: none;
 	}
 
+	// Homepage
 	.home-slider {
 
 		.slick-arrow {
@@ -588,6 +664,15 @@
 				position: absolute;
 				top: 5px;
 			}
+		}
+	}
+
+	.slider-text {
+		top: 37.5%;
+
+		h2 {
+			font-size: 120px;
+			padding: 0 0 35px 0;
 		}
 	}
 
@@ -652,6 +737,11 @@
 		    justify-content: space-around;
 
 		font-size: 14px;
+
+		&.sub-menu {
+			display: none;
+			position: absolute;
+		}
 	}
 
 	.page-template-homepage .main-header {

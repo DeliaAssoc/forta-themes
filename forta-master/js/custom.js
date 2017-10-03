@@ -18,8 +18,9 @@ jQuery(document).ready(function($) {
 		$mobileClose = $mobileMenu.find( '#close-this' ),
 		$hmSlides = $( '.home-slider' ).find( '.slide' ),
 		$vidOverlay = $( '.hm-vid-overlay' ),
-		$secHeading = $( '.secondary' ).find( 'h1' );
-
+		$secHeading = $( '.secondary' ).find( 'h1' ),
+		$parentNavItem = $( '#primary-menu > .menu-item-has-children' ),
+		$parentIcon = $parentNavItem.find( '.fa' );
 
 	// If window is smaller than 1024px
 	if ( $winWidth < 1024 )
@@ -64,6 +65,17 @@ jQuery(document).ready(function($) {
 				'height' : '55px'
 			});
 		}
+
+		// Parallax effect on secondary page header images
+		$( window ).scroll( function(){
+
+			var $headerImage = $( '.header-image' ),
+				wScroll = $( this ).scrollTop();
+
+			$headerImage.css({
+				'background-position-y' : -wScroll /8,
+			});
+		});
 	}
 
 	// Open form block on 'Request a Quote' click
@@ -90,6 +102,17 @@ jQuery(document).ready(function($) {
 		$vidOverlay.css( 'height', $winHeight );
 		$hmSlides.css( 'height', $winHeight );
 	});
+
+	// Add down chevron icon to any menu item with children
+	$parentNavItem.prepend( '<i class="fa fa-chevron-down" aria-hidden="true"></i>' );
+
+	// Open sub menu on menu chevron icon click
+	$parentIcon.live( 'click', function(){
+		$parentNavItem.find( '.sub-menu' ).slideToggle();
+	});
+
+	$parentIcon.on( 'click', function()
+		{console.log( 'I was clicked' ) });
 
 	// Lock header to top of window navigation when scrollpoint reached
 	$( window ).on( 'scroll', function(){
@@ -174,18 +197,6 @@ jQuery(document).ready(function($) {
 			$btt.removeClass( 'visible' );
 		}
 	});
-
-	// Parallax effect on secondary page header images
-	$( window ).scroll( function(){
-
-		var $headerImage = $( '.header-image' ),
-			wScroll = $( this ).scrollTop();
-
-		$headerImage.css({
-			'background-position-y' : -wScroll /8,
-		});
-	});
-
 
 	// Set 1st product tab and tab content to visible on page load 
 	$( '.product-tabs' ).find( 'li' ).first().find( 'a' ).addClass( 'active' );

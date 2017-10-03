@@ -8,6 +8,7 @@
  */
 
 include( get_stylesheet_directory() . '/includes/customizer.php' );
+include( get_stylesheet_directory() . '/includes/wyswig_styles.php' );
 
 if ( ! function_exists( 'forta_master_setup' ) ) :
 
