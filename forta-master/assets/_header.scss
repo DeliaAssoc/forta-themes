@@ -107,10 +107,18 @@
 	}
 
 	input {
+		background-color: #dadada;
+	    padding: 3px 10px;
 		width: calc(100% - 30px);
 	}
 
+	label {
+		font-size: 10px;
+	}
+
 	textarea {
+		background-color: #dadada;
+	    padding: 3px 10px;
 		width: calc(100% - 30px);
 	}
 }
@@ -160,6 +168,7 @@
 	position: relative;
 
 	.fa {
+		color: $white-color;
 		display: block;
 		height: 36px;
 		position: absolute;

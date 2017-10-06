@@ -334,6 +334,30 @@ div.wpcf7 .ajax-loader {
   content: '\f231';
 }
 
+a.icons3 {
+  width: 33%;
+}
+
+a.icons4 {
+  width: 25%;
+}
+
+a.icons5 {
+  width: 20%;
+}
+
+a.icons6 {
+  width: 16.666%;
+}
+
+a.icons7 {
+  width: 14.285%;
+}
+
+a.icons8 {
+  width: 12.5%;
+}
+
 .content-area {
   background: #FFFFFF;
 }
@@ -363,6 +387,10 @@ div.wpcf7 .ajax-loader {
   right: 10px;
 }
 
+a.slider-btn {
+  color: #FFFFFF;
+}
+
 .cta-btn {
   padding: 10px 15px;
 }
@@ -375,6 +403,14 @@ div.wpcf7 .ajax-loader {
   display: block;
   font-size: 14px;
   padding: 5px 7px;
+}
+
+a.border-btn {
+  border: 1px solid;
+  display: inline-block;
+  min-width: 200px;
+  padding: 5px 15px;
+  text-align: center;
 }
 
 .back-to-top {
@@ -951,9 +987,16 @@ a:active {
   clear: both;
 }
 .top-form input {
+  background-color: #dadada;
+  padding: 3px 10px;
   width: calc(100% - 30px);
 }
+.top-form label {
+  font-size: 10px;
+}
 .top-form textarea {
+  background-color: #dadada;
+  padding: 3px 10px;
   width: calc(100% - 30px);
 }
 
@@ -993,6 +1036,7 @@ a:active {
   position: relative;
 }
 .menu-item-has-children .fa {
+  color: #FFFFFF;
   display: block;
   height: 36px;
   position: absolute;
@@ -1997,7 +2041,7 @@ object {
     position: absolute;
     top: 47%;
     width: 40px;
-    z-index: 9999;
+    z-index: 1;
   }
   .home-slider .slick-arrow:before {
     font-size: 24px;
@@ -2046,6 +2090,7 @@ object {
   }
   .main-header .main-navigation {
     display: block;
+    overflow: visible;
   }
   .main-header a {
     color: #FFFFFF;
@@ -2086,6 +2131,22 @@ object {
   .main-navigation .menu-main-menu-container ul.sub-menu {
     display: none;
     position: absolute;
+    width: 165px;
+  }
+  .main-navigation .menu-main-menu-container ul.sub-menu a:hover {
+    color: #333333 !important;
+  }
+
+  .menu-main-menu-container .fa {
+    font-size: 10px;
+    height: 20px;
+    right: -20px;
+    top: -3px;
+    width: 20px;
+  }
+  .menu-main-menu-container .sub-menu {
+    padding: 10px;
+    width: auto;
   }
 
   .page-template-homepage .main-header {
@@ -2098,7 +2159,7 @@ object {
     background-color: #333333;
     bottom: auto;
     position: fixed;
-    top: 64px;
+    top: 66px;
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     -ms-transition: all 0.25s ease-in-out;

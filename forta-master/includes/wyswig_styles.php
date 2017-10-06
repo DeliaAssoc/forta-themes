@@ -14,6 +14,12 @@ function my_mce_before_init_insert_formats( $init_array ) {
 	$style_formats = array(  
 		// Each array child is a format with it's own settings
 		array(  
+			'title' => 'Border Button',  
+			'selector' => 'span, a',  
+			'classes' => 'border-btn',
+			'wrapper' => false,
+		),
+		array(  
 			'title' => 'Fade In Down',  
 			'selector' => 'span, p, a, h1, h2, h3, h4',  
 			'classes' => 'fadeInDown animated',
@@ -124,7 +130,7 @@ function my_mce_before_init_insert_formats( $init_array ) {
 		),
 	);  
 	// Insert the array, JSON ENCODED, into 'style_formats'
-	$init_array['style_formats'] = json_encode( $style_formats );  
+	$init_array[ 'style_formats' ] = json_encode( $style_formats );  
 	
 	return $init_array;  
   

@@ -76,7 +76,6 @@ function forta_master_customizer( $wp_customize ) {
 	$wp_customize->add_setting( 'forta_master_social_pinterest_link', array( 'default' => __( '' ), 'forta_master' ) );
 	// Privacy Policy
 	$wp_customize->add_setting( 'forta_privacy_policy' );
-
 	// Product Pages
 	$wp_customize->add_setting( 'forta_master_products' );
 	$wp_customize->add_setting( 'forta_master_products_image', array( 'default' => __( '' ), 'forta_master' ) );

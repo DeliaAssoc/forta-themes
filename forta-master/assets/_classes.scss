@@ -93,6 +93,30 @@ div.wpcf7 .ajax-loader {
 	}
 }
 
+a.icons3 {
+	width: 33%;
+}
+
+a.icons4 {
+	width: 25%;
+}
+
+a.icons5 {
+	width: 20%;
+}
+
+a.icons6 {
+	width: 16.666%;
+}
+
+a.icons7 {
+	width: 14.285%
+}
+
+a.icons8 {
+	width: 12.5%;
+}
+
 .content-area {
 	background: $white-color;
 }
@@ -123,6 +147,10 @@ div.wpcf7 .ajax-loader {
 	}
 }
 
+a.slider-btn {
+	color: $white-color;
+}
+
 .cta-btn {
 	padding: 10px 15px;
 }
@@ -135,6 +163,14 @@ div.wpcf7 .ajax-loader {
 	display: block;
 	font-size: 14px;
 	padding: 5px 7px;
+}
+
+a.border-btn {
+	border: 1px solid;
+	display: inline-block;
+	min-width: 200px;
+	padding: 5px 15px;
+	text-align: center;
 }
 
 .back-to-top {

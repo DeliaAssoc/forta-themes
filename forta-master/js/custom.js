@@ -18,14 +18,14 @@ jQuery(document).ready(function($) {
 		$mobileClose = $mobileMenu.find( '#close-this' ),
 		$hmSlides = $( '.home-slider' ).find( '.slide' ),
 		$vidOverlay = $( '.hm-vid-overlay' ),
-		$secHeading = $( '.secondary' ).find( 'h1' ),
+		// $secHeading = $( '.secondary' ).find( 'h1' ),
 		$parentNavItem = $( '#primary-menu > .menu-item-has-children' ),
 		$parentIcon = $parentNavItem.find( '.fa' );
 
 	// If window is smaller than 1024px
 	if ( $winWidth < 1024 )
 	{
-		// Pull menu up above viewport
+		// Pull menu behind viewport and set width
 		$siteTopLeft.css( 'top', -$sitopLeftHeight );
 		$mobileMenu.css( 'left', -$winWidth );
 		$topForm.css( 'width', $winWidth );
@@ -57,14 +57,14 @@ jQuery(document).ready(function($) {
 	if ( $winWidth > 1023 ) {
 
 		// Keep secondary page content and sidebar aligned
-		if ( $secHeading.outerHeight() > 55 )
-		{
-			$secHeading.css(
-			{
-				'fontSize' : '40px',
-				'height' : '55px'
-			});
-		}
+		// if ( $secHeading.outerHeight() > 55 )
+		// {
+		// 	$secHeading.css(
+		// 	{
+		// 		'fontSize' : '40px',
+		// 		'height' : '55px'
+		// 	});
+		// }
 
 		// Parallax effect on secondary page header images
 		$( window ).scroll( function(){
