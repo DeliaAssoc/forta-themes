@@ -75,6 +75,20 @@
 
 		<?php endif; ?>
 
+		<?php
+
+			if ( get_field( 'savings_calculator' ) == 'yes' ) : ?>
+
+			<div class="savings-calc">
+				<span class="calc-heading">Calculate your savings!</span>
+				FORTA-FI<sup>®</sup> your asphalt for Tons of Savings! Compare material costs between a traditional asphalt mix and FORTAfied Asphalt.
+				<span class="BoxClick1">
+					<a class="OpenCalc" href="#">Open Savings Calculator</a>
+				</span>
+			</div>
+
+		<?php endif; ?>
+
 		</aside>
 	</div>
 

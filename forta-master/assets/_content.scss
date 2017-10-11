@@ -155,8 +155,9 @@
 	}
 }
 
-// Products Listing Page
-.page-template-products-template {
+// Products and Project Listing Pages
+.page-template-products-template,
+.page-template-projects-template {
 
 	.site-content {
 		padding: 191px 0 0 0;
@@ -183,6 +184,42 @@
 
 	h1.products-heading {
 		color: $darkest;
+	}
+}
+
+.savings-calc {
+	background-color: $darkest;
+	color: $white-color;
+	display: block;
+	font-size: 15px;
+	max-width: 350px;
+	padding: 20px 15px;
+	width: 100%;
+}
+
+.calc-heading {
+	border-bottom: 2px solid;
+	display: block;
+	font-size: 21px;
+	margin: 0 0 10px 0;
+	padding: 0 0 10px 0;
+	text-transform: uppercase;
+}
+
+.OpenCalc {
+	display: block;
+	font-weight: 700;
+	padding: 10px 0 0 10px;
+	position: relative;
+	text-transform: uppercase;
+
+	&:before {
+		color: $white-color;
+		content: '\f0da';
+		font-family: $fa;
+		left: 0;
+		position: absolute;
+		top: 9px;
 	}
 }
 
@@ -214,13 +251,13 @@
 
 	a {
 		color: $lt-gray;
-		font-size: 1.15em;
+		font-size: 0.9em;
 		font-weight: 700;
 		text-transform: uppercase;
 
 		&.active {
 			border-bottom: 2px solid;
-			padding: 0 0 5px 0;
+			padding: 0 0 7px 0;
 		}
 	}
 }

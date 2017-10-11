@@ -1003,7 +1003,7 @@ a:active {
 .mobile-nav {
   position: absolute;
   padding: 50px 0 30px 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   z-index: 99999;
   color: #FFFFFF;
@@ -1256,27 +1256,67 @@ a:active {
   flex-direction: column;
 }
 
-.page-template-products-template .site-content {
+.page-template-products-template .site-content,
+.page-template-projects-template .site-content {
   padding: 191px 0 0 0;
 }
-.page-template-products-template .products-page-info {
+.page-template-products-template .products-page-info,
+.page-template-projects-template .products-page-info {
   padding: 30px 0;
 }
-.page-template-products-template .products-page-info .flexxed {
+.page-template-products-template .products-page-info .flexxed,
+.page-template-projects-template .products-page-info .flexxed {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
 }
-.page-template-products-template .products-page-info .sub-text {
+.page-template-products-template .products-page-info .sub-text,
+.page-template-projects-template .products-page-info .sub-text {
   color: #231f20;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: 700;
   padding: 10px 0 0 0;
 }
-.page-template-products-template h1.products-heading {
+.page-template-products-template h1.products-heading,
+.page-template-projects-template h1.products-heading {
   color: #333333;
+}
+
+.savings-calc {
+  background-color: #333333;
+  color: #FFFFFF;
+  display: block;
+  font-size: 15px;
+  max-width: 350px;
+  padding: 20px 15px;
+  width: 100%;
+}
+
+.calc-heading {
+  border-bottom: 2px solid;
+  display: block;
+  font-size: 21px;
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+.OpenCalc {
+  display: block;
+  font-weight: 700;
+  padding: 10px 0 0 10px;
+  position: relative;
+  text-transform: uppercase;
+}
+.OpenCalc:before {
+  color: #FFFFFF;
+  content: '\f0da';
+  font-family: "FontAwesome", sans-serif;
+  left: 0;
+  position: absolute;
+  top: 9px;
 }
 
 .products-tab-list .tab-text {
@@ -1303,13 +1343,13 @@ a:active {
 }
 .product-tabs a {
   color: #bcbec0;
-  font-size: 1.15em;
+  font-size: 0.9em;
   font-weight: 700;
   text-transform: uppercase;
 }
 .product-tabs a.active {
   border-bottom: 2px solid;
-  padding: 0 0 5px 0;
+  padding: 0 0 7px 0;
 }
 
 .product-listings {
@@ -1632,17 +1672,20 @@ object {
     font-size: 20px;
   }
 
-  .page-template-products-template .heading-wrapper {
+  .page-template-products-template .heading-wrapper,
+  .page-template-projects-template .heading-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin: 0 0 20px 0;
   }
-  .page-template-products-template h1.products-heading {
+  .page-template-products-template h1.products-heading,
+  .page-template-projects-template h1.products-heading {
     display: inline-block;
     font-size: 54px;
   }
-  .page-template-products-template .custom-hr {
+  .page-template-products-template .custom-hr,
+  .page-template-projects-template .custom-hr {
     border-bottom: 4px solid #bcbec0;
     margin: 0 0 0 20px;
     width: 100%;
@@ -1664,10 +1707,12 @@ object {
     width: 32.5%;
   }
 
-  .page-template-products-template h1.products-heading {
+  .page-template-products-template h1.products-heading,
+  .page-template-projects-template h1.products-heading {
     font-size: 64px;
   }
-  .page-template-products-template .custom-hr {
+  .page-template-products-template .custom-hr,
+  .page-template-projects-template .custom-hr {
     height: 60px;
   }
 
@@ -1712,13 +1757,16 @@ object {
     font-size: 36px;
   }
 
-  .page-template-products-template h1.products-heading {
+  .page-template-products-template h1.products-heading,
+  .page-template-projects-template h1.products-heading {
     font-size: 74px;
   }
-  .page-template-products-template .custom-hr {
+  .page-template-products-template .custom-hr,
+  .page-template-projects-template .custom-hr {
     height: 70px;
   }
-  .page-template-products-template .products-page-info .sub-text {
+  .page-template-products-template .products-page-info .sub-text,
+  .page-template-projects-template .products-page-info .sub-text {
     font-size: 24px;
     line-height: 1.25em;
   }
@@ -1821,21 +1869,25 @@ object {
     width: 24.5%;
   }
 
-  .page-template-products-template .products-page-info .flexxed {
+  .page-template-products-template .products-page-info .flexxed,
+  .page-template-projects-template .products-page-info .flexxed {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
   }
-  .page-template-products-template .products-page-info .sub-text {
+  .page-template-products-template .products-page-info .sub-text,
+  .page-template-projects-template .products-page-info .sub-text {
     padding: 15px;
     width: 35%;
   }
-  .page-template-products-template .products-page-info .page-description {
+  .page-template-products-template .products-page-info .page-description,
+  .page-template-projects-template .products-page-info .page-description {
     padding: 15px;
     width: 65%;
   }
-  .page-template-products-template .products-page-info .page-description p {
+  .page-template-products-template .products-page-info .page-description p,
+  .page-template-projects-template .products-page-info .page-description p {
     margin: 0;
   }
 }
@@ -1887,18 +1939,22 @@ object {
     margin: 0;
   }
 
-  .page-template-products-template h1.products-heading {
+  .page-template-products-template h1.products-heading,
+  .page-template-projects-template h1.products-heading {
     font-size: 100px;
   }
-  .page-template-products-template .custom-hr {
+  .page-template-products-template .custom-hr,
+  .page-template-projects-template .custom-hr {
     height: 95px;
   }
-  .page-template-products-template .products-page-info .sub-text {
+  .page-template-products-template .products-page-info .sub-text,
+  .page-template-projects-template .products-page-info .sub-text {
     font-size: 30px;
     padding: 20px;
     width: 45%;
   }
-  .page-template-products-template .products-page-info .page-description {
+  .page-template-products-template .products-page-info .page-description,
+  .page-template-projects-template .products-page-info .page-description {
     padding: 20px;
     width: 55%;
   }
@@ -2194,7 +2250,8 @@ object {
     width: 49%;
   }
 
-  .page-template-products-template article .constrain {
+  .page-template-products-template article .constrain,
+  .page-template-projects-template article .constrain {
     display: block;
   }
 

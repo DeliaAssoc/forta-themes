@@ -67,6 +67,8 @@
 		a.products-btn:hover { color: #fff; background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		a.border-btn { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' );  ?>; color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		a.border-btn:hover { background-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; color: #fff; }
+		.calc-heading { border-color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?> }
+		a.OpenCalc { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 		.product-tabs a.active { color: <?php echo get_theme_mod( 'forta_master_accent_color' ); ?>; }
 	</style>
 	<?php endif; ?>
